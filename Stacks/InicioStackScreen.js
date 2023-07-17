@@ -6,6 +6,7 @@ import HomeScreen from '../Screens/HomeScreen';
 import BarraSuperiorVolver from '../Screens/BarraSuperiorVolver';
 import RadioDanli from '../Screens/Empresas/RadioDanli';
 import TeleDanli from '../Screens/Empresas/TeleDanli';
+import EstacionNaranja from '../Screens/Empresas/EstacionNaranja'
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ const InicioStackScreen = () => {
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Tele Danli" component={TeleDanli}  options={{ headerShown: false }}/>
       <Stack.Screen name="Radio Danli" component={RadioDanli}  options={{ headerShown: false }}/>
+      <Stack.Screen name="Estacion Naranja" component={EstacionNaranja}  options={{ headerShown: false }}/>
     </Stack.Navigator>
   );
 };

@@ -8,8 +8,9 @@ const HomeScreen = () => {
     { text: 'Tele Danlí', image: 'https://i.imgur.com/uACcx3w.png' },
     { text: 'Radio Danlí', image: 'https://i.imgur.com/kMXURXi.png' },
     { text: 'Estacion Naranja', image: 'https://i.imgur.com/xk9QA4r.png' },
+     { text: 'Old Music Radio', image: 'https://i.imgur.com/BC0eIPC.png' },
     { text: 'El Astro', image: 'https://i.imgur.com/rGLUqkt.png' },
-    { text: 'Old Music Radio', image: 'https://i.imgur.com/BC0eIPC.png' },
+   
     { text: 'Astro TV', image: 'https://i.imgur.com/RBKDht6.png' },
     { text: 'Hot Wings', image: 'https://i.imgur.com/RBKDht6.png' },
     { text: 'Astro Producciones', image: 'https://i.imgur.com/RBKDht6.png' },
@@ -26,7 +27,7 @@ const HomeScreen = () => {
     } else if (text === 'Radio Danlí') {
       navigation.navigate('Radio Danli');
     } else if (text === 'Estacion Naranja') {
-      navigation.navigate('Ajustes');
+      navigation.navigate('Estacion Naranja');
     } else if (text === 'El Astro') {
       navigation.navigate('Ajustes');
     } else if (text === 'Old Music Radio') {
