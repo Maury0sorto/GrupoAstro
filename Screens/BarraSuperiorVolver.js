@@ -62,22 +62,8 @@ const BarraSuperiorVolver = () => {
 export default BarraSuperiorVolver;
 
 const styles = StyleSheet.create({
-
-  containerBarra: {
-    flex: 1,
+  safeAreaView: {
     backgroundColor: 'transparent',
-  },
-  container: {
-    flex: 1,
-  },
-  container2: {
-    flex: 1,
-    paddingHorizontal: 16,
-    marginTop: 16,
-  },
-  containerBarra: {
-    flex: 1,
-    backgroundColor: '#fff',
   },
   headerBarra: {
     flexDirection: 'row',
@@ -87,7 +73,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#18D0F1',
     borderBottomWidth: 1,
     borderBottomColor: 'gray',
-    borderRadius: 15,
+    borderRadius: 0,
   },
   logoBarra: {
     width: 85,

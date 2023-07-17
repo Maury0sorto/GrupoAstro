@@ -4,7 +4,7 @@ import { Video } from 'expo-av';
 import { Ionicons } from '@expo/vector-icons';
 import BarraSuperiorVideos from '../BarraSuperiorVideos';
 
-const EstacionNaranja = () => {
+const AstroTv = () => {
   const [muted, setMuted] = useState(false);
 
   const handleMutePress = () => {
@@ -35,7 +35,7 @@ const EstacionNaranja = () => {
       <View style={styles.videoContainer}>
         <Video
           ref={videoRef}
-          source={{ uri: 'https://cloud2.streaminglivehd.com:1936/8220/8220/playlist.m3u8' }}
+          source={{ uri: 'https://cloud2.streaminglivehd.com:1936/8138/8138/playlist.m3u8' }}
           style={styles.video}
           useNativeControls
           resizeMode="contain"
@@ -55,7 +55,7 @@ const EstacionNaranja = () => {
   );
 };
 
-export default EstacionNaranja;
+export default AstroTv;
 
 const styles = StyleSheet.create({
   container: {

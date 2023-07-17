@@ -10,12 +10,17 @@ const HomeScreen = () => {
     { text: 'Estacion Naranja', image: 'https://i.imgur.com/xk9QA4r.png' },
      { text: 'Old Music Radio', image: 'https://i.imgur.com/BC0eIPC.png' },
     { text: 'El Astro', image: 'https://i.imgur.com/rGLUqkt.png' },
-   
-    { text: 'Astro TV', image: 'https://i.imgur.com/RBKDht6.png' },
-    { text: 'Hot Wings', image: 'https://i.imgur.com/RBKDht6.png' },
-    { text: 'Astro Producciones', image: 'https://i.imgur.com/RBKDht6.png' },
+    { text: 'Astro TV', image: 'https://i.imgur.com/MoTOiRf.png' },
+    { text: 'Fundación Castillo Valle', image: 'https://i.imgur.com/BNfYfNF.png' },
+    { text: 'Astro Producciones', image: 'https://i.imgur.com/F7OsJXi.png' },
     { text: 'Astro Play', image: 'https://i.imgur.com/RBKDht6.png' },
-    { text: 'Carlos Castillo Ciggar & Co.', image: 'https://i.imgur.com/RBKDht6.png' },
+    { text: 'Carlos Castillo Ciggar & Co.', image: 'https://i.imgur.com/vxCp1c0.png' },
+    { text: 'Digital Solución', image: 'https://i.imgur.com/gAJkXoB.png' },
+    { text: 'Inversiones ALCA', image: 'https://i.imgur.com/aD6UYET.png' },
+    { text: 'Restaurantes y Hoteles de Oriente', image: 'https://i.imgur.com/Nqk2X6x.png' },
+    { text: 'Hacienda el Retiro', image: 'https://i.imgur.com/yKLGQFQ.png' },
+    { text: 'Inmobiliaria Apaguiz', image: 'https://i.imgur.com/Df1Bic6.png' },
+    { text: 'Publicidad Nacional', image: 'https://i.imgur.com/2QfiABR.png' },
   ]);
 
 
@@ -24,16 +29,33 @@ const HomeScreen = () => {
     // Configura la navegación a las pantallas correspondientes según el texto del botón
     if (text === 'Tele Danlí') {
       navigation.navigate('Tele Danli');
-    } else if (text === 'Radio Danlí') {
+    }
+     else if (text === 'Radio Danlí') {
       navigation.navigate('Radio Danli');
-    } else if (text === 'Estacion Naranja') {
+    } 
+    else if (text === 'Estacion Naranja') {
       navigation.navigate('Estacion Naranja');
-    } else if (text === 'El Astro') {
-      navigation.navigate('Ajustes');
-    } else if (text === 'Old Music Radio') {
-      navigation.navigate('Ajustes');
-    } else if (text === 'Astro TV') {
-      navigation.navigate('Ajustes');
+    }
+     else if (text === 'El Astro') {
+      navigation.navigate('El Astro');
+    } 
+    else if (text === 'Old Music Radio') {
+      navigation.navigate('Old Music Radio');
+    }
+     else if (text === 'Astro TV') {
+      navigation.navigate('Astro Tv');
+    }
+    else if (text === 'Fundación Castillo Valle') {
+      navigation.navigate('Fundacion Castillo');
+    }
+    else if (text === 'Carlos Castillo Ciggar & Co.') {
+      navigation.navigate('Carlos');
+    }
+    else if (text === 'Astro Play') {
+      navigation.navigate('Astro Play');
+    }
+    else if (text === 'Astro Producciones') {
+      navigation.navigate('Astro Producciones');
     }
   };
 

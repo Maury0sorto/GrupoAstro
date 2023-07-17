@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     height: 85,
     marginLeft: -28,
   },
-  logoMarginBarra: {
+  logoMarginBarra: { 
     marginBottom: -28,
   },
   titleBarra: {
