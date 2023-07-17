@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, Image, ScrollView, Share } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons,MaterialCommunityIcons  } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons'; 
+
 import HomeScreen from './HomeScreen';
 
 const BarraSuperior = () => {
@@ -23,6 +25,10 @@ const BarraSuperior = () => {
     navigation.navigate('Ajustes');
   };
 
+  const handleSupportPress = () => {
+    navigation.navigate('Contactar');
+  };
+
   return (
     <SafeAreaView style={styles.containerBarra}>
       <View style={styles.headerBarra}>
@@ -33,13 +39,16 @@ const BarraSuperior = () => {
         />
         
         <Text style={[styles.titleBarra, styles.titleMarginBarra]}>Grupo Astro</Text>
+        <TouchableOpacity onPress={handleSupportPress} style={styles.iconContainer3}>
+    <AntDesign name="customerservice" size={24} color="black" style={styles.iconMarginBarra3} />
+  </TouchableOpacity>
         <TouchableOpacity onPress={handleSharePress} style={styles.iconContainer2}>
           <MaterialCommunityIcons  name="share-variant" size={24} color="black"  style={styles.iconMarginBarra2}  />
         </TouchableOpacity>
         <TouchableOpacity onPress={handleSettingsPress}>
           <Ionicons name="settings" size={24} color="black" style={styles.iconMarginBarra} />
         </TouchableOpacity>
-       
+    
       </View>
 
 
@@ -107,4 +116,13 @@ const styles = StyleSheet.create({
   iconMarginBarra2: {
     marginTop: 30,
   },
+
+  iconContainer3: {
+    marginRight: -90,
+    marginLeft: 30,
+  },
+  iconMarginBarra3: {
+    marginTop: 30,
+  },
+
 });

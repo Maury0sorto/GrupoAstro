@@ -99,7 +99,7 @@ const HomeScreen = () => {
       <TouchableOpacity
         style={styles.footer}
         onPress={() => {
-          // Acción al presionar la imagen
+          navigation.navigate('Contactar'); // Acción al presionar la imagen
         }}
       >
         <Image

@@ -14,6 +14,7 @@ import FundacionCastillo from '../Screens/Empresas/FundacionCastillo';
 import AstroPlay from '../Screens/Empresas/AstroPlay';
 import OldMusicRadio from '../Screens/Empresas/OldMusicRadio';
 import AstroProducciones from '../Screens/Empresas/AstroProducciones';
+import Contactar from '../Screens/Contactar';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ const InicioStackScreen = () => {
         options={{ headerShown: false }} // Oculta la barra superior en la pantalla "Inicio"
       />
       <Stack.Screen name="Ajustes" component={SettingsScreen} />
+      <Stack.Screen name="Contactar" component={Contactar} />
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Tele Danli" component={TeleDanli}  options={{ headerShown: false }}/>
       <Stack.Screen name="Radio Danli" component={RadioDanli}  options={{ headerShown: false }}/>

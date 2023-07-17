@@ -11,7 +11,7 @@ const App = () => {
     // Simulación de carga de la aplicación
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // Tiempo de carga en milisegundos (5 segundos en este caso)
+    }, 2000); // Tiempo de carga en milisegundos (5 segundos en este caso)
   }, []);
 
   const handleAdPress = () => {
