@@ -9,12 +9,12 @@ const HomeScreen = () => {
     { text: 'Radio Danlí', image: 'https://i.imgur.com/kMXURXi.png' },
     { text: 'Estacion Naranja', image: 'https://i.imgur.com/xk9QA4r.png' },
      { text: 'Old Music Radio', image: 'https://i.imgur.com/BC0eIPC.png' },
+     { text: 'Astro TV', image: 'https://i.imgur.com/MoTOiRf.png' },
+     { text: 'Astro Play', image: 'https://i.imgur.com/KiDiz2i.png' },
     { text: 'El Astro', image: 'https://i.imgur.com/rGLUqkt.png' },
-    { text: 'Astro TV', image: 'https://i.imgur.com/MoTOiRf.png' },
+    { text: 'Carlos Castillo Ciggar & Co.', image: 'https://i.imgur.com/vxCp1c0.png' },
     { text: 'Fundación Castillo Valle', image: 'https://i.imgur.com/BNfYfNF.png' },
     { text: 'Astro Producciones', image: 'https://i.imgur.com/F7OsJXi.png' },
-    { text: 'Astro Play', image: 'https://i.imgur.com/RBKDht6.png' },
-    { text: 'Carlos Castillo Ciggar & Co.', image: 'https://i.imgur.com/vxCp1c0.png' },
     { text: 'Digital Solución', image: 'https://i.imgur.com/gAJkXoB.png' },
     { text: 'Inversiones ALCA', image: 'https://i.imgur.com/aD6UYET.png' },
     { text: 'Restaurantes y Hoteles de Oriente', image: 'https://i.imgur.com/Nqk2X6x.png' },
@@ -67,6 +67,7 @@ const HomeScreen = () => {
       const button2 = data[i + 1];
       rows.push(
         <View style={styles.row} key={i}>
+          {/* Botón 1 */}
           <TouchableOpacity
             style={styles.button}
             onPress={() => handleButtonPress(button1.text)}
@@ -74,6 +75,7 @@ const HomeScreen = () => {
             <Image source={{ uri: button1.image }} style={styles.buttonImage} />
             <Text style={styles.buttonText}>{button1.text}</Text>
           </TouchableOpacity>
+          {/* Botón 2 (opcional) */}
           {button2 && (
             <TouchableOpacity
               style={styles.button}
@@ -90,12 +92,21 @@ const HomeScreen = () => {
   };
 
   return (
-    
     <View style={styles.container}>
-        
-      <ScrollView>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.container2}>{renderButtons()}</View>
       </ScrollView>
+      <TouchableOpacity
+        style={styles.footer}
+        onPress={() => {
+          // Acción al presionar la imagen
+        }}
+      >
+        <Image
+          source={{ uri: 'https://i.imgur.com/U6HEeix.gif' }}
+          style={styles.footerImage}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -104,8 +115,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  scrollViewContent: {
+    flexGrow: 1,
+  },
   container2: {
-    flex: 1,
     paddingHorizontal: 16,
     marginTop: 16,
   },
@@ -130,7 +143,18 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 18,
     color: 'black',
-    textAlign: "center",
+    textAlign: 'center',
+  },
+  footer: {
+    alignItems: 'center',
+    marginTop: 20,
+  },
+
+  footerImage: {
+    width: '100%',
+    height: 74,
+    resizeMode: 'cover',
+    marginTop: -20,
   },
 });
 

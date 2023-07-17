@@ -3,20 +3,39 @@ import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 
 const Cargando = () => {
   const [showLoading, setShowLoading] = useState(true);
+  const [dots, setDots] = useState('');
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoading(false);
-    }, 5000);
+    const timer = setInterval(() => {
+      setDots((prevDots) => {
+        return prevDots.length >= 3 ? '' : prevDots + '.';
+      });
+    }, 500);
 
-    return () => clearTimeout(timer);
+    return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    if (!showLoading) {
+      setDots('');
+    }
+  }, [showLoading]);
+
+  useEffect(() => {
+    if (!showLoading) {
+      const timer = setTimeout(() => {
+        setShowLoading(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [dots]);
 
   if (showLoading) {
     return (
       <View style={styles.container}>
         <ActivityIndicator size="large" color="blue" style={styles.indicator} />
-        <Text style={styles.text}>Cargando...</Text>
+        <Text style={styles.text}>Cargando{dots}</Text>
       </View>
     );
   }
