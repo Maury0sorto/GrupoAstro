@@ -10,7 +10,7 @@ const Cargando = () => {
       setDots((prevDots) => {
         return prevDots.length >= 3 ? '' : prevDots + '.';
       });
-    }, 1000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
